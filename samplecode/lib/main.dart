@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:owlallsample/buttonpage/button_page_root.dart';
+import 'package:owlallsample/AlerDailogClass.dart';
 
 void main() => runApp(MyApp());
 
@@ -64,21 +65,19 @@ class _ListViewWidget extends State<ListViewWidgetPage> {
         ),
         body: ListView(
           children: <Widget>[
-            ListTile( leading: Icon(Icons.map), title: Text('$_counter'),
+            ListTile( leading: Icon(Icons.add_circle_outline), title: Text('$_counter'),
               onTap: () {
                 _ChageString();
               },
             ),
-            ListTile( leading: Icon(Icons.photo_album), title: Text('누르면 숫자가 오름'),
+            ListTile( leading: Icon(Icons.sim_card_alert), title: Text('경고 버튼 예제'),
               onTap: () {
-                _ChageString();
+                Navigator.of(context).push(MaterialPageRoute(builder: (_) => AlertDialogDemo()));
               },
             ),
-            ListTile( leading: Icon(Icons.phone), title: Text('네비게이션 페이지'),
+            ListTile( leading: Icon(Icons.navigation), title: Text('네비게이션 페이지'),
               onTap: () {
-                Navigator
-                    .of(context)
-                    .push(MaterialPageRoute(builder: (_) => BottenVeiwTop()));
+                Navigator.of(context).push(MaterialPageRoute(builder: (_) => BottenVeiwTop()));
               },
             ),
           ],
