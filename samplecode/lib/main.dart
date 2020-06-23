@@ -63,6 +63,36 @@ class _ListViewWidget extends State<ListViewWidgetPage> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
+
+        /////////////////////////////////////////////
+        // 상단 탑 옆 드래그 메뉴
+        drawer: Drawer(
+          // 옆 버튼 드레그 메뉴
+          child: ListView(
+            // Important: Remove any padding from the ListView.
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              DrawerHeader(
+                child: Text('Drawer Header'),
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                ),
+              ),
+              ListTile(
+                title: Text('Item 1'),
+                onTap: (){},
+              ),
+              ListTile(
+                title: Text('Item 2'),
+                onTap: (){},
+              ),
+            ],
+          ),
+        ),
+        /////////////////////////////////////////////
+
+
+
         body: ListView(
           children: <Widget>[
             ListTile( leading: Icon(Icons.add_circle_outline), title: Text('$_counter'),
