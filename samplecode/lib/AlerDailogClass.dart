@@ -27,22 +27,6 @@ class AlertDialogDemo extends StatelessWidget {
                   showAlertDialog(context);
                 },
               ),
-              RaisedButton(
-                child: Text("Snack Bar Button"),
-                onPressed: () {
-                  Scaffold.of(context).showSnackBar(
-                      SnackBar(
-                        content: Text('Yay! A SnackBar!'),
-                        action: SnackBarAction(
-                          label: 'Undo',
-                          onPressed: () {
-                            // Some code to undo the change.
-                          },
-                        ),
-                      )
-                  );
-                },
-              )
             ],
           ),
         ));

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:owlallsample/buttonpage/button_page_root.dart';
 import 'package:owlallsample/AlerDailogClass.dart';
+import 'package:owlallsample/TapPage.dart';
 // 자동 줄 맞춤은 Ctrl + Alt + L;
 
 void main() => runApp(MyApp());
@@ -54,6 +55,19 @@ class _MainRootViewPageWidget extends State<MainRootViewPage> {
     setState(() {
       _counter++;
     });
+  }
+
+  SnackBar TestSnack(String str_temp)
+  {
+    return SnackBar(
+      content: Text(str_temp),
+      action: SnackBarAction(
+        label: '확인',
+        onPressed: () {
+          // Some code to undo the change.
+        },
+      ),
+    );
   }
 
   @override
@@ -123,7 +137,21 @@ class _MainRootViewPageWidget extends State<MainRootViewPage> {
                     .push(MaterialPageRoute(builder: (_) => BottenVeiwTop()));
               },
             ),
-
+            ListTile(
+              leading: Icon(Icons.navigation),
+              title: Text('스낵바'),
+              onTap: () {
+                Scaffold.of(context).showSnackBar(TestSnack('테스트 스낵'));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.touch_app),
+              title: Text('탭바 페이지'),
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => TapPageTop()));
+              },
+            ),
           ],
         ),
       ),
