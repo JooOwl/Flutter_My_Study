@@ -149,7 +149,7 @@ class _MainRootViewPageWidget extends State<MainRootViewPage> {
               title: Text('탭바 페이지'),
               onTap: () {
                 Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (_) => TapPageTop()));
+                    .push(MaterialPageRoute(builder: (_) => TabPageMain()));
               },
             ),
           ],
