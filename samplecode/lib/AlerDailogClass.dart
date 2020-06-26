@@ -7,17 +7,26 @@ class AlertDialogDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: scaffoldKey,
-      appBar: AppBar(title: Text("AlertDialog Demo")),
-      body: Center(
-          child: RaisedButton(
-            child: Text("Show AlertDialog"),
-            onPressed: () {
-              showAlertDialog(context);
-            },
-          )
-      ),
-    );
+        key: scaffoldKey,
+        appBar: AppBar(title: Text("AlertDialog Demo")),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              RaisedButton(
+                child: Text("아무것도 아닌 버튼", style: TextStyle(fontSize: 24),),
+                color: Colors.blue,
+                textColor: Colors.red,
+              ),
+              RaisedButton(
+                child: Text("Show AlertDialog"),
+                onPressed: () {
+                  showAlertDialog(context);
+                },
+              )
+            ],
+          ),
+        ));
   }
 
   void showAlertDialog(BuildContext context) async {
@@ -44,7 +53,7 @@ class AlertDialogDemo extends StatelessWidget {
             FlatButton(
               child: Text('111'),
               onPressed: () {
-              Navigator.pop(context, "111");
+                Navigator.pop(context, "111");
               },
             ),
           ],
