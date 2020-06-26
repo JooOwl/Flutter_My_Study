@@ -14,7 +14,10 @@ class AlertDialogDemo extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               RaisedButton(
-                child: Text("아무것도 아닌 버튼", style: TextStyle(fontSize: 24),),
+                child: Text(
+                  "아무것도 아닌 버튼",
+                  style: TextStyle(fontSize: 24),
+                ),
                 color: Colors.blue,
                 textColor: Colors.red,
               ),
@@ -22,6 +25,22 @@ class AlertDialogDemo extends StatelessWidget {
                 child: Text("Show AlertDialog"),
                 onPressed: () {
                   showAlertDialog(context);
+                },
+              ),
+              RaisedButton(
+                child: Text("Snack Bar Button"),
+                onPressed: () {
+                  Scaffold.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text('Yay! A SnackBar!'),
+                        action: SnackBarAction(
+                          label: 'Undo',
+                          onPressed: () {
+                            // Some code to undo the change.
+                          },
+                        ),
+                      )
+                  );
                 },
               )
             ],
