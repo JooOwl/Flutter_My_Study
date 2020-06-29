@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:owlallsample/buttonpage/button_page_root.dart';
 import 'package:owlallsample/AlerDailogClass.dart';
 import 'package:owlallsample/TapPage.dart';
+import 'package:owlallsample/TextFieldClass.dart';
 // 자동 줄 맞춤은 Ctrl + Alt + L;
 
 void main() => runApp(MyApp());
@@ -150,6 +151,14 @@ class _MainRootViewPageWidget extends State<MainRootViewPage> {
               onTap: () {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (_) => TabPageMain()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.text_fields),
+              title: Text('텍스트 필드 페이지'),
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => TextFieldRoot()));
               },
             ),
           ],
