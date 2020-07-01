@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:owlallsample/buttonpage/button_page_root.dart';
+import 'package:owlallsample/buttonpage/snackBarPage.dart';
 import 'package:owlallsample/AlerDailogClass.dart';
 import 'package:owlallsample/TapPage.dart';
 import 'package:owlallsample/TextFieldClass.dart';
+import 'package:owlallsample/ListSamples/ListRootPage.dart';
+import 'package:owlallsample/WebImageView.dart';
+import 'package:owlallsample/NavigationSamples/Navigation_List_Page.dart';
 // 자동 줄 맞춤은 Ctrl + Alt + L;
 
 void main() => runApp(MyApp());
@@ -56,19 +60,6 @@ class _MainRootViewPageWidget extends State<MainRootViewPage> {
     setState(() {
       _counter++;
     });
-  }
-
-  SnackBar TestSnack(String str_temp)
-  {
-    return SnackBar(
-      content: Text(str_temp),
-      action: SnackBarAction(
-        label: '확인',
-        onPressed: () {
-          // Some code to undo the change.
-        },
-      ),
-    );
   }
 
   @override
@@ -131,18 +122,19 @@ class _MainRootViewPageWidget extends State<MainRootViewPage> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.navigation),
-              title: Text('네비게이션 페이지'),
+              leading: Icon(Icons.radio_button_checked),
+              title: Text('버튼 페이지'),
               onTap: () {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (_) => BottenVeiwTop()));
               },
             ),
             ListTile(
-              leading: Icon(Icons.navigation),
+              leading: Icon(Icons.aspect_ratio),
               title: Text('스낵바'),
               onTap: () {
-                Scaffold.of(context).showSnackBar(TestSnack('테스트 스낵'));
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => SnackBarPageVeiw(title : "SnackBar Test")));
               },
             ),
             ListTile(
@@ -159,6 +151,30 @@ class _MainRootViewPageWidget extends State<MainRootViewPage> {
               onTap: () {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (_) => TextFieldRoot()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.list),
+              title: Text('리스트 예제 페이지'),
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => ListSamplesPage()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.image),
+              title: Text('웹 이미지 보기'),
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => WebImg_Page()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.navigation),
+              title: Text('네비게이선 페이지'),
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => NavidagionSamplesPage()));
               },
             ),
           ],
