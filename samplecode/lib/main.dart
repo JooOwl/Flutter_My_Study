@@ -3,7 +3,7 @@ import 'package:owlallsample/buttonpage/button_page_root.dart';
 import 'package:owlallsample/buttonpage/snackBarPage.dart';
 import 'package:owlallsample/AlerDailogClass.dart';
 import 'package:owlallsample/TapPage.dart';
-import 'package:owlallsample/TextFieldClass.dart';
+import 'package:owlallsample/TextFieldPage/TextField_List_Page.dart';
 import 'package:owlallsample/ListSamples/ListRootPage.dart';
 import 'package:owlallsample/WebImageView.dart';
 import 'package:owlallsample/NavigationSamples/Navigation_List_Page.dart';
@@ -150,7 +150,7 @@ class _MainRootViewPageWidget extends State<MainRootViewPage> {
               title: Text('텍스트 필드 페이지'),
               onTap: () {
                 Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (_) => TextFieldRoot()));
+                    .push(MaterialPageRoute(builder: (_) => TextFieldSamplesPage()));
               },
             ),
             ListTile(

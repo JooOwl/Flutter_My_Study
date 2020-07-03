@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:owlallsample/NavigationSamples/data_toss_page.dart';
+import 'package:owlallsample/NavigationSamples/hero_animations.dart';
+import 'package:owlallsample/NavigationSamples/send_new_page_data.dart';
 
 class NavidagionSamplesPage extends StatelessWidget {
   // Global Key of Scaffold
@@ -23,7 +25,24 @@ class NavidagionSamplesPage extends StatelessWidget {
                   Navigator.of(context).push(MaterialPageRoute(builder: (_) => HomeScreen()));
                 },
               ),
-
+              RaisedButton(
+                child: Text(
+                  "Hero Animation",
+                  style: TextStyle(fontSize: 20),
+                ),
+                onPressed:(){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (_) => TransitionPage()));
+                },
+              ),
+              RaisedButton(
+                child: Text(
+                  "send page data",
+                  style: TextStyle(fontSize: 20),
+                ),
+                onPressed:(){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (_) => TodosScreen()));
+                },
+              ),
             ],
           ),
         ));
