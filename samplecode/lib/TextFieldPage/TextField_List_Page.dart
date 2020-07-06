@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:owlallsample/TextFieldPage/TextFieldClass.dart';
 import 'package:owlallsample/TextFieldPage/TextField_02.dart';
-
+import 'package:owlallsample/TextFieldPage/textfield_focus.dart';
 
 class TextFieldSamplesPage extends StatelessWidget {
   // Global Key of Scaffold
@@ -32,6 +32,15 @@ class TextFieldSamplesPage extends StatelessWidget {
                 ),
                 onPressed:(){
                   Navigator.of(context).push(MaterialPageRoute(builder: (_) => TextField_02()));
+                },
+              ),
+              RaisedButton(
+                child: Text(
+                  "textfield_focus",
+                  style: TextStyle(fontSize: 20),
+                ),
+                onPressed:(){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (_) => textfield_focus()));
                 },
               ),
             ],
