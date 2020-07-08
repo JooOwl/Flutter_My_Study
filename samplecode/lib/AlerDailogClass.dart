@@ -39,7 +39,14 @@ class AlertDialogDemo extends StatelessWidget {
       builder: (BuildContext context) {
         return AlertDialog(
           title: Text('AlertDialog Demo'),
-          content: Text("Select button you want"),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: <Widget>[
+                Text('This is a demo alert dialog.'),
+                Text('Would you like to approve of this message?'),
+              ],
+            ),
+          ),
           actions: <Widget>[
             FlatButton(
               child: Text('OK'),

@@ -16,18 +16,6 @@ class TextField_02 extends StatelessWidget {
   }
 }
 
-class TextField_02_Start extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final title = 'Gesture Demo';
-
-    return MaterialApp(
-      title: title,
-      home: TextField_02Veiw(title: title),
-    );
-  }
-}
-
 class TextField_02Veiw extends StatelessWidget {
   final String title;
 

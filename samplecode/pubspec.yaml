@@ -14,6 +14,8 @@ dependencies:
 
   cupertino_icons: ^0.1.3
 
+  provider: ^1.6.1 #modal_bottom_sheet 예제를 위해 추가.
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -7,19 +7,18 @@ import 'package:owlallsample/TextFieldPage/TextField_List_Page.dart';
 import 'package:owlallsample/ListSamples/ListRootPage.dart';
 import 'package:owlallsample/WebImageView.dart';
 import 'package:owlallsample/NavigationSamples/Navigation_List_Page.dart';
+import 'package:owlallsample/LayOut_Tuto/layout_list.dart';
 // 자동 줄 맞춤은 Ctrl + Alt + L;
 
 void main() => runApp(MyApp());
 
-// 메인 바디만 구성하는 클래스
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       // MateriApp 타입의 바디.
       debugShowCheckedModeBanner: false, // 디버그 마크를 보일지 말지 결정.
-      home: Scaffold(
-        // scaffold 가 뭔진 모르지만 홈이시다.
+      home: Scaffold( // MaterialApp 구성 요소 안에 Scaffold 타입으로 home 을 구성
         body: SafeAreaBodyWidget(), // 바디를 만들꺼야~~ class는 safeareaBody 로
       ),
     );
@@ -175,6 +174,14 @@ class _MainRootViewPageWidget extends State<MainRootViewPage> {
               onTap: () {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (_) => NavidagionSamplesPage()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.layers),
+              title: Text('레이아웃 페이지'),
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => LayOut_List()));
               },
             ),
           ],
