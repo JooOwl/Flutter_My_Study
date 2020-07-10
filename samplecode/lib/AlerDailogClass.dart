@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AlertDialogDemo extends StatelessWidget {
@@ -37,7 +38,8 @@ class AlertDialogDemo extends StatelessWidget {
       context: context,
       barrierDismissible: false, // user must tap button!
       builder: (BuildContext context) {
-        return AlertDialog(
+        // AlertDialog
+        return CupertinoAlertDialog(
           title: Text('AlertDialog Demo'),
           content: SingleChildScrollView(
             child: ListBody(
