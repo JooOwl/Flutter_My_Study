@@ -8,6 +8,7 @@ import 'package:owlallsample/ListSamples/ListRootPage.dart';
 import 'package:owlallsample/WebImageView.dart';
 import 'package:owlallsample/NavigationSamples/Navigation_List_Page.dart';
 import 'package:owlallsample/LayOut_Tuto/layout_list.dart';
+import 'package:owlallsample/appbar_page.dart';
 // 자동 줄 맞춤은 Ctrl + Alt + L;
 
 void main() => runApp(MyApp());
@@ -182,6 +183,14 @@ class _MainRootViewPageWidget extends State<MainRootViewPage> {
               onTap: () {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (_) => LayOut_List()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.space_bar),
+              title: Text('앱 바 페이지'),
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => AppBar_Page()));
               },
             ),
           ],
