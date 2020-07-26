@@ -16,6 +16,8 @@ dependencies:
 
   provider: ^1.6.1 #modal_bottom_sheet 예제를 위해 추가.
 
+  matrix4_transform: any # card animation 예제를 위한 추가.
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

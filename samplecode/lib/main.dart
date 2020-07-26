@@ -9,6 +9,7 @@ import 'package:owlallsample/WebImageView.dart';
 import 'package:owlallsample/NavigationSamples/Navigation_List_Page.dart';
 import 'package:owlallsample/LayOut_Tuto/layout_list.dart';
 import 'package:owlallsample/appbar_page.dart';
+import 'package:owlallsample/card_animation.dart';
 // 자동 줄 맞춤은 Ctrl + Alt + L;
 
 void main() => runApp(MyApp());
